@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap');
+
+$text-color: hsl(193, 38%, 86%);
+$color-green: hsl(150, 100%, 66%);
+$card-color-bg: hsl(217, 19%, 38%);
+$color-bg: hsl(217, 19%, 24%);
+
+*,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    display: grid;
+    place-items: center;
+    grid-template-rows: 100vh 0;
+    padding: 0 4%;
+    background: $color-bg;
+    font-size: 28px;
+    font-family: 'Manrope', sans-serif;
+}
+
+.card {
+    position: relative;
+    width: 100%;
+    max-width: 540px;
+    text-align: center;
+    padding: 40px 0 60px;
+    background: $card-color-bg;
+    border-radius: 10px;
+    grid-row: 1;
+}
+
+.header {
+    color: $color-green;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 4px;
+}
+
+.quote {
+    margin: 20px;
+    color: $text-color;
+}
+
+#desktop {
+    display: none;
+}
+
+.dice-btn {
+    position: absolute;
+    margin: auto;
+    inset-inline: 0;
+    bottom: -32px;
+    width: 64px;
+    aspect-ratio: 1 / 1;
+    background: $color-green;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    &:hover {
+        box-shadow: 0 0 1.5rem 0 $color-green;
+    }
+}
+
+.attribution { 
+    position: absolute;
+    bottom: 10px;
+    font-size: 11px; 
+    text-align: center;
+    color: $text-color;
+}
+
+.attribution a { 
+    color: #52ffa8; 
+}
+
+@media screen and (min-width: 900px) {
+    #desktop {
+        display: block;
+        margin: auto;
+    }
+
+    #mobile {
+        display: none;
+    }
+}
